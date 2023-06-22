@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/advanced-react-workshop1/static/css/main.2fdb89dd.css",
+    "main.js": "/advanced-react-workshop1/static/js/main.8936ac58.js",
+    "index.html": "/advanced-react-workshop1/index.html",
+    "main.2fdb89dd.css.map": "/advanced-react-workshop1/static/css/main.2fdb89dd.css.map",
+    "main.8936ac58.js.map": "/advanced-react-workshop1/static/js/main.8936ac58.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2fdb89dd.css",
+    "static/js/main.8936ac58.js"
+  ]
+}
