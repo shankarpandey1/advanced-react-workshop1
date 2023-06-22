@@ -1,8 +1,8 @@
 {
-  "name": "fetch-show-users-react",
+  "name": "advanced-react-workshop1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shankarpandey1.github.io/filter-data-react/",
+  "homepage": "https://shankarpandey1.github.io/advanced-react-workshop1/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

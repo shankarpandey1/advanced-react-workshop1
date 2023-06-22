@@ -1,83 +1,46 @@
-import { useEffect, useState } from 'react';
-import './style.scss';
+import Header from './Header';
+import Nav from './Nav';
+import Main from './Main';
+import Aside from './Aside';
+import Footer from './Footer';
+import Data from "./Data";
+import Hello from "./Hello";
+import './style.css';
+
 
 function App() {
-  const [data, setData] = useState({
-    // results: []
-  });
-
-
-  const [users, setUsers] = useState([]);
-
-  const [searchData, setSearchData] = useState('');
-
-  const { results } = data;
-
-  useEffect(() => {
-    // console.log('Fetching data')
-    // fetch("https://randomuser.me/api/?inc=name,picture&results=48")
-    //   .then((data) => { return data.json() })
-    //   .then((data) => { setData(data) })
-    //   .catch((err) => { console.log(err) });
-    //    setData(parsedData);
-
-    (async () => {
-      console.log('Fetching data')
-      const rawData = await fetch("https://randomuser.me/api/?inc=name,picture&results=100");
-      const data = await rawData.json();
-      setData(data);
-      setUsers(data?.results || [])
-    })();
-  }, []);
-
-  useEffect(() => {
-    const newUsers = results?.filter((user) => {
-      const fullName = `${user.name.title}${user.name.first}${user.name.last}`
-      if (
-        fullName.toLowerCase().replaceAll(' ', '').includes(searchData)
-      ) {
-        return true;
-      }
-      return false;
-    });
-    setUsers(newUsers || []);
-
-  }, [searchData]);
-
-
+  const data = Data();
+  // function Hello(props) {
+  //   return <h1>Hello {props.name}</h1>
+  // }
+  // const ans = <Hello name="React" />;
 
   return (
+    <div>
+      <Header />
+      <Nav />
+      <div className="main-content">
+        <div className="columns-container">
+          <Main />
+          <Aside />
+          <Hello name="Class" />
+          <p>Important Notices ==></p><ul>
+            <li>Business related</li>
+            <li>Job related</li>
+            <li>Employee training</li>
+            <li>Vacation</li>
+            <li>Recent</li>
+          </ul>
 
-    <div id="app">
-      <h1>List of users</h1>
-      <div className="container">
-        <input
-          id="filter"
-          class="form-control mb-3 form-control-lg"
-          placeholder="type to filter the data..."
-          onChange={(event) => {
-            setSearchData(event.target.value.toLowerCase());
-          }}
-        />
-        <div className="users row">
-          {
-            users.map((item, index) => {
-              const finalName = `${item.name.title} ${item.name.first} ${item.name.last}`;
-              return <div className="col-2 user" key={`item-${index}`}>
-                <img src={item.picture.thumbnail} alt={finalName} />
-                <h3>{finalName}</h3>
-                <button
-                  onClick={async () => { await console.log('hello') }}
-                >
-                  show me
-                </button>
-              </div>
-            })
-          }
+
         </div>
       </div>
-    </div>
+
+      <Footer />
+    </div >
+
   );
+
 }
 
 export default App;
