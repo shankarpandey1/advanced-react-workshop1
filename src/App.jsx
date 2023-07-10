@@ -4,8 +4,10 @@ import Main from './Main';
 import Aside from './Aside';
 import Footer from './Footer';
 import Data from "./Data";
-import Hello from "./Hello";
+// import Hello from "./Hello";
+import BusinessCard from "./BusinessCard";
 import './style.css';
+
 
 
 function App() {
@@ -21,16 +23,16 @@ function App() {
       <Nav />
       <div className="main-content">
         <div className="columns-container">
-          <Main />
-          <Aside />
-          <Hello name="Class" />
-          <p>Important Notices ==></p><ul>
+          <Main appName={new BusinessCard()} />
+          {/* <Aside /> */}
+          {/* <Hello name="Class" /> */}
+          {/* <p>Important Notices ==></p><ul>
             <li>Business related</li>
             <li>Job related</li>
             <li>Employee training</li>
             <li>Vacation</li>
             <li>Recent</li>
-          </ul>
+          </ul> */}
 
 
         </div>

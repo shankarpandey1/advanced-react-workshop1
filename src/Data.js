@@ -1,5 +1,4 @@
- function Data() {
-    return { name: "react- workshop1" };
-  }
-  
-  export default Data;
+
+export default function Data() {
+  return { name: "react-workshop1" };
+}

@@ -1,91 +1,104 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-  }
-  
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .columns-container {
-    display: flex;
-  }
-  
-  .columns-container > * {
-    flex: 1;
-  }
-  
-  .carousel {
-    display: flex;
-    align-items: center;
-  }
-  
-  .carousel img {
-    margin: 0 10px;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 30px 20px;
-    text-align: center;
-  }
-  
-  header h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  
-  header p {
-    font-size: 24px;
-  }
-  
-  nav {
-    background-color: #666;
-    padding: 10px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul li {
-    margin: 0 10px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    font-size: 10px;
-  }
-  
-  .my-image {
-    width: 20%;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.columns-container {
+  display: flex;
+}
+
+.columns-container > * {
+  flex: 1;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+}
+
+/* .carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+/* .carousel img {
+  margin: 0 10px;
+} */
+
+.business-card {
+  margin: 0 20px;
+}
+
+.business-card img {
+  width: 80%;
+  height: auto;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 20px;
+}
+
+nav {
+  background-color: #666;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.my-image {
+  width: 20%;
+}

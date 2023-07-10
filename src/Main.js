@@ -1,24 +1,26 @@
-function Main () {
-    return (
-      <main>
-        <h1>
-        <i className="bi bi-card-checklist"></i>Main
-        </h1>
-        <p>
-         components of e-commerce business
-      </p>
-      <p>
-        <ul>
-            <li>Customer Engagement</li>
-            <li>Quality Of Your Products</li>
-            <li>Standardization Of Your Product Prices</li>
-            <li>Ensuring Your Store Security</li>
-            <li>Reliable and Trusted Customer Support</li>
-            <li>Enabling M-Commerce</li>
-            <li>Utilize The Power Of Social Media</li>
-        </ul>
-      </p>
-      </main>
-    );
-  }
-  export default Main;
+import BusinessCard from './BusinessCard';
+
+const Main = () => {
+  const businessCardsData = [
+    { name: 'Jorge', email: 'jorge@example.com', tel: '111-1111', photo: 'https://banffventureforum.com/wp-content/uploads/2019/08/no-photo-icon-22.png' },
+    { name: 'Shankar', email: 'shankar@example.com', tel: '222-2222', photo: 'https://banffventureforum.com/wp-content/uploads/2019/08/no-photo-icon-22.png' },
+ { name: 'Lucian', email: 'lucian@example.com', tel: '333-3333', photo: 'https://banffventureforum.com/wp-content/uploads/2019/08/no-photo-icon-22.png' },
+ { name: 'Ali', email: 'ali@example.com', tel: '444-4444', photo: 'https://banffventureforum.com/wp-content/uploads/2019/08/no-photo-icon-22.png' },
+ { name: 'Jason', email: 'jason@example.com', tel: '555-5555', photo: 'https://banffventureforum.com/wp-content/uploads/2019/08/no-photo-icon-22.png' },
+    
+  ];
+
+  return (
+    <div className="main-content">
+      {businessCardsData.map((cardData, index) => (
+        <BusinessCard key={index} {...cardData} />
+      ))}
+    </div>
+  );
+};
+
+export default Main;
+
+
+
+
